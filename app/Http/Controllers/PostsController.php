@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -80,5 +80,13 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function contact(){
+        return view('contact');
+    }
+
+    public function show_post($id, $name, $password){
+        return view('post', compact('id','name','password'));
     }
 }
