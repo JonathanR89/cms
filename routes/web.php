@@ -11,33 +11,33 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//   #return 'Hello World';
-//});
+Route::get('/', function () {
+    return view('welcome');
+   #return 'Hello World';
+});
 
 //Route::get('/contact', 'PostsController@contact');
 
 //Route::get('post/{id}/{name}/{password}', 'PostsController@show_post');
 
-//Route::get('/insert', function(){
-//	DB::insert('insert into posts(title, content) values(?, ?)', ['Laravel Title', 'Laravel bosy text.']);
-//});
+Route::get('/insert', function(){
+	DB::insert('insert into posts(title, content) values(?, ?)', ['Laravel Title', 'Laravel bosy text.']);
+});
 
 
-//Route::get('/read', function() {
-//	$results = DB::select('select * from posts where id = ?', [1]);
-//
-//	foreach($results as $post){
-//		return $post->title;
-//	}
-//});
+Route::get('/read', function() {
+	$results = DB::select('select * from posts where id = ?', [1]);
+
+	foreach($results as $post){
+		return $post->title;
+	}
+});
 
 
-//Route::get('/update', function(){
-//	$updated = DB::update('update posts set title = "Update Title" where id = ?', [1]);
-//	return $updated;
-//});
+Route::get('/update', function(){
+	$updated = DB::update('update posts set title = "Update Title" where id = ?', [1]);
+	return $updated;
+});
 
 
 Route::get('/delete', function() {
