@@ -23,3 +23,12 @@
 //Route::get('/insert', function(){
 //	DB::insert('insert into posts(title, content) values(?, ?)', ['Laravel Title', 'Laravel bosy text.']);
 //});
+
+
+Route::get('/read', function() {
+	$results = DB::select('select * from posts where id = ?', [1]);
+
+	foreach($results as $post){
+		return $post->title;
+	}
+});
