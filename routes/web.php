@@ -25,10 +25,16 @@
 //});
 
 
-Route::get('/read', function() {
-	$results = DB::select('select * from posts where id = ?', [1]);
+//Route::get('/read', function() {
+//	$results = DB::select('select * from posts where id = ?', [1]);
+//
+//	foreach($results as $post){
+//		return $post->title;
+//	}
+//});
 
-	foreach($results as $post){
-		return $post->title;
-	}
+
+Route::get('/update', function(){
+	$updated = DB::update('update posts set title = "Update Title" where id = ?', [1]);
+	return $updated;
 });
