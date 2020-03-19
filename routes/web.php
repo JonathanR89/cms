@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-    #return 'Hello World';
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//   #return 'Hello World';
+//});
 
-Route::get('/contact', 'PostsController@contact');
+//Route::get('/contact', 'PostsController@contact');
 
-Route::get('post/{id}/{name}/{password}', 'PostsController@show_post');
+//Route::get('post/{id}/{name}/{password}', 'PostsController@show_post');
+
+//Route::get('/insert', function(){
+//	DB::insert('insert into posts(title, content) values(?, ?)', ['Laravel Title', 'Laravel bosy text.']);
+//});
